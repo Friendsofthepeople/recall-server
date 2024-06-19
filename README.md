@@ -13,7 +13,7 @@ A Node server to managing the verification of constituents, publishing of repres
 - JWT
 
 ### Join the Community
-- [Discord server](https://discord.gg/ZyCfgAQ6)
+- [Discord server](https://discord.gg/v6TYzfuZc8)
 - [Twitter]()
 
 Happy hacking with you!
