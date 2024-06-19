@@ -7,5 +7,11 @@
     "Timothy Mugo Gachengo <timomugo01@gmail.com>"
   ],
   "license": "MIT",
-  "private": false
+  "private": false,
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21"
+  }
 }
