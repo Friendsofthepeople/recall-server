@@ -12,4 +12,8 @@ A Node server to managing the verification of constituents, publishing of repres
 - Mongoose
 - JWT
 
+### Join the Community
+- [Discord server](https://discord.gg/ZyCfgAQ6)
+- [Twitter]()
+
 Happy hacking with you!
