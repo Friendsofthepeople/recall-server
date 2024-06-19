@@ -1,0 +1,11 @@
+{
+  "name": "recall-server",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:Friendsofthepeople/recall-server.git",
+  "contributors": [
+    "Timothy Mugo Gachengo <timomugo01@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": false
+}
