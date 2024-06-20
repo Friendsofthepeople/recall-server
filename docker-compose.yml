@@ -1,0 +1,71 @@
+services:
+  web:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    ports:
+      - "4000:4000"
+    container_name: "recall_server_node"
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - type: bind
+        source: .
+        target: /app
+
+  db:
+    container_name: "recall_server_db"
+    build:
+      context: .
+      dockerfile: ./docker/postgres/Dockerfile
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+      - ./docker/postgres/initdb.sh:/docker-entrypoint-initdb.d/initdb.sh
+    ports:
+      - "5432:5432"
+    env_file:
+      - .env.db
+
+  pgadmin-compose:
+    container_name: "recall_server_pgadmin"
+    image: elestio/pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: "dbuser@recall.com"
+      PGADMIN_DEFAULT_PASSWORD: "test123!"
+    ports:
+      - "16543:80"
+    depends_on:
+      - db
+    volumes:
+      - ./servers.json:/pgadmin4/servers.json
+
+  redis:
+    image: "redis:7"
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  redis-insights:
+    image: "redislabs/redisinsight:latest"
+    container_name: "recall_server_redis_insights"
+    ports:
+      - "5540:5540"
+    environment:
+      - REDIS_URI=redis://redis:6379
+    depends_on:
+      - redis
+    volumes:
+      - redisinsight:/data
+
+volumes:
+  postgres_data:
+  redis_data:
+  redisinsight:
+

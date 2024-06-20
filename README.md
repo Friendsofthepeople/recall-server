@@ -7,7 +7,7 @@ A Node server for managing the verification of constituents, publishing of repre
 
 ### Stack
 - Typescript
-- Mongo DB
+- Express JS
 - Docker
 - PostgreSQL
 - JWT
@@ -17,3 +17,8 @@ A Node server for managing the verification of constituents, publishing of repre
 - [Twitter]()
 
 Happy hacking with you!
+
+## Getting Started with Development
+
+### Prerequisites
+-  Docker
