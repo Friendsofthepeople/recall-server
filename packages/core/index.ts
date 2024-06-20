@@ -1,1 +1,1 @@
-console.log('Core package loaded');
+export { default as config } from './config';

@@ -7,12 +7,17 @@
     "dev": "nodemon",
     "build": "tsc",
     "lint": "eslint .",
-    "lint:fix": "eslint . --fix"
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watchAll --detectOpenHandles"
   },
   "dependencies": {
+    "dotenv": "^16.4.5",
     "express": "^4.19.2"
   },
   "devDependencies": {
-    "@recall-server/eslint-config": "*"
+    "@recall-server/eslint-config": "*",
+    "@recall-server/jest-config": "*",
+    "ts-jest": "^29.1.5"
   }
 }

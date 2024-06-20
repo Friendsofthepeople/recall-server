@@ -1,0 +1,16 @@
+{
+  "name": "@recall-server/common",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@recall-server/core": "*",
+    "dayjs": "^1.11.11",
+    "winston": "^3.13.0",
+    "winston-daily-rotate-file": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/morgan": "^1.9.9",
+    "morgan": "^1.10.0"
+  }
+}
