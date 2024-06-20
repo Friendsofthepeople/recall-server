@@ -1,0 +1,20 @@
+services:
+  web:
+    restart: always
+    build:
+      context: .
+      dockerfile: ./docker/web/Dockerfile
+    ports:
+      - "4000:4000"
+    container_name: "recall_server_node"
+    environment:
+      - NODE_ENV=development
+    env_file:
+      - .env
+    depends_on:
+      - db
+      - redis
+    volumes:
+      - type: bind
+        source: .
+        target: /app
