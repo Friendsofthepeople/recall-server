@@ -21,7 +21,7 @@
     // paths
     "baseUrl": "./",
     "paths": {
-      "@/*": ["src/*"]
+      "@recall-server/*": ["packages/*"]
     },
     //build
     "outDir": "build",
