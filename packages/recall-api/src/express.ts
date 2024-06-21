@@ -4,7 +4,8 @@ import express, {
 import compression from 'compression';
 import helmet from 'helmet';
 import cors from 'cors';
-import { loggerMiddleware } from '@recall-server/common/logger';
+import logger, { loggerMiddleware } from '@recall-server/common/logger';
+import { dbClient } from "./database";
 
 export default async ({ app }: { app: Application }) => {
   app.use(express.json());
@@ -102,4 +103,13 @@ export default async ({ app }: { app: Application }) => {
 
     next();
   });
+
+  //connect to DB
+  try {
+    await dbClient.connect();
+    console.log('Connected to DB');
+    logger.log('Connected to DB');
+  } catch (error) {
+    logger.error('Error connecting to DB',false, error);
+  }
 };

@@ -17,7 +17,7 @@ const config = {
     postgres: {
       client: 'pg',
       host: process.env.DATABASE_HOST || 'localhost',
-      database: process.env.DATABASE_DATABASE || 'psotgres',
+      database: process.env.DATABASE_NAME || 'psotgres',
       user: process.env.DATABASE_USER || 'postgres',
       password: process.env.DATABASE_PASSWORD || '',
       port: parseInt(<string>process.env.DATABASE_PORT) || 5432,
