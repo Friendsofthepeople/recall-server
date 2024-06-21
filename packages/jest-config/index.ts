@@ -14,7 +14,7 @@ const config = {
     "**/?(*.)+(spec|test).[tj]s?(x)"
   ],
   transform: {
-    "^.+\\.(ts|tsx)$": "ts-jest"
+    '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
   }
 };
 
