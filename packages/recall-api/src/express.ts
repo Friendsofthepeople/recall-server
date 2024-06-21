@@ -5,7 +5,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import cors from 'cors';
 import logger, { loggerMiddleware } from '@recall-server/common/logger';
-import { dbClient } from "./database";
+import { dbClient } from "@recall-server/data/database";
 
 export default async ({ app }: { app: Application }) => {
   app.use(express.json());

@@ -1,4 +1,4 @@
-# recall-server
+# Recall Server
 A Node server for managing the verification of constituents, publishing of representative information, and signing to recall them.
 
 ### About Repo
@@ -9,16 +9,58 @@ A Node server for managing the verification of constituents, publishing of repre
 - Typescript
 - Express JS
 - Docker
+- Docker Compose
 - PostgreSQL
 - JWT
+- Drizzle ORM
+- Jest
+- Eslint
+- Lerna, Nx and Yarn Workspaces
+
 
 ### Join the Community
 - [Discord server](https://discord.gg/v6TYzfuZc8)
 - [Twitter]()
 
-Happy hacking with you!
+
 
 ## Getting Started with Development
 
 ### Prerequisites
--  Docker
+- [Docker](https://docs.docker.com/desktop/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
+- [Node.JS (v20+)](https://nodejs.org/en/download/)
+- [Yarn < v1.9](https://yarnpkg.com/getting-started/install)
+
+### Setup
+1. Clone the repository
+- Using SSH
+```bash
+git clone git@github.com:Friendsofthepeople/recall-server.git
+```
+- Using HTTPS
+```bash
+git clone https://github.com/Friendsofthepeople/recall-server.git
+```
+
+1. Install dependencies
+```bash
+yarn install
+```
+
+1. Copy the `.env.example` file to `.env` and update the environment variables
+```bash
+cp .env.example .env
+```
+
+1. Make the Development script executable
+```bash
+chmod +x dev-scripts.sh
+```
+
+1. Run the development script to start up the docker containers
+```bash
+./dev-scripts.sh
+```
+
+### Happy hacking with you!
