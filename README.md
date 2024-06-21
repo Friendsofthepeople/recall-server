@@ -43,22 +43,22 @@ git clone git@github.com:Friendsofthepeople/recall-server.git
 git clone https://github.com/Friendsofthepeople/recall-server.git
 ```
 
-1. Install dependencies
-```bash
-yarn install
-```
-
 1. Copy the `.env.example` file to `.env` and update the environment variables
 ```bash
 cp .env.example .env
 ```
 
-1. Make the Development script executable
+2. Install the dependencies
+```bash
+yarn install
+```
+
+3. Make the Development script executable
 ```bash
 chmod +x dev-scripts.sh
 ```
 
-1. Run the development script to start up the docker containers
+4. Run the development script to start up the docker containers
 ```bash
 ./dev-scripts.sh
 ```

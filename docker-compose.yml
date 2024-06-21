@@ -11,6 +11,8 @@ services:
       - "5432:5432"
     env_file:
       - .env.db
+    networks:
+      recall-network: {}
 
   pgadmin-compose:
     container_name: "recall_server_pgadmin"
@@ -31,6 +33,8 @@ services:
       - "6379:6379"
     volumes:
       - redis_data:/data
+    networks:
+      recall-network: {}
 
   redis-insights:
     image: "redislabs/redisinsight:latest"
@@ -43,9 +47,14 @@ services:
       - redis
     volumes:
       - redisinsight:/data
+    networks:
+      recall-network: {}
 
 volumes:
   postgres_data:
   redis_data:
   redisinsight:
 
+networks:
+  recall-network:
+    driver: bridge

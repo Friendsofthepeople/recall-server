@@ -19,3 +19,8 @@ services:
         source: .
         target: /app
       - /app/node_modules
+    networks:
+      recall-network: {}
+
+networks:
+  recall-network:
