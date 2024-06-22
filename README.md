@@ -5,6 +5,24 @@ A Node server for managing the verification of constituents, publishing of repre
 - This repo hosts the open-source server powering Public Gavel.
 - It exposes APIs to facilitate verification and registration of constituents in a credible and secure way.
 
+## Table of Contents
+- [Recall Server](#recall-server)
+    - [About Repo](#about-repo)
+  - [Table of Contents](#table-of-contents)
+    - [Stack](#stack)
+    - [Join the Community](#join-the-community)
+  - [Getting Started with Development](#getting-started-with-development)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+  - [Installing Node Modules](#installing-node-modules)
+  - [Folder Structure](#folder-structure)
+  - [Running Tests](#running-tests)
+  - [Linting](#linting)
+    - [Fixing Lint Issues](#fixing-lint-issues)
+  - [Additional Libraries](#additional-libraries)
+    - [Drizzle ORM](#drizzle-orm)
+    - [License](#license)
+
 ### Stack
 - Typescript
 - Express JS
@@ -70,6 +88,47 @@ yarn add -W <package-name>
 ```
 - To update the node_modules inside docker, run the following command:
 ```bash
-./dev-scripts.sh update
+docker compose up --build
 ```
 
+## Folder Structure
+- The project is a monorepo with the following structure:
+```
+.
+├── packages
+│   ├── common
+│   ├── core
+│   ├── data
+│   ├── recall-api (Express Server)
+│   ├── eslint-config
+│   ├── jest-config
+```
+
+## Running Tests
+- To run tests in a package, run the following command:
+```bash
+yarn test:watch <package-name>
+```
+
+## Linting
+- To lint the code in a package, run the following command:
+```bash
+yarn lint <package-name>
+```
+
+### Fixing Lint Issues
+- To fix lint issues in a package, run the following command:
+```bash
+yarn lint:fix <package-name>
+```
+
+## Additional Libraries
+
+### Drizzle ORM
+- Drizzle is a lightweight ORM for Node.js and TypeScript. It is designed to be simple and easy to use, while still providing the necessary features to work with databases.
+- [Drizzle ORM](https://orm.drizzle.team/)
+
+
+### License
+- This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+```
