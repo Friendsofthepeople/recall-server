@@ -1,7 +1,10 @@
-const config = {
+import type { Config } from 'jest';
+
+const config: Config = {
   clearMocks: true,
   collectCoverage: true,
   coverageDirectory: "coverage",
+  preset: 'ts-jest',
   coveragePathIgnorePatterns: [
     "/node_modules/"
   ],
@@ -15,7 +18,10 @@ const config = {
   ],
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.json' }],
-  }
+  },
+  setupFilesAfterEnv: ['./setup-tests.ts'],
+  testEnvironment: 'node',
+  testPathIgnorePatterns: ['/node_modules/', '/dist/', '/build/'],
 };
 
 export default config;

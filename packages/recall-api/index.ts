@@ -15,7 +15,7 @@ server.on('error', (err: Error) => {
 const port = process.env.PORT || 3002;
 
 server.listen(port, () => {
-  console.log(` Server started at ${dayjs().tz('Africa/Nairobi').format('LLLL')} on port ${port}`);
+  console.log(`[ ready ] Server started at ${dayjs().tz('Africa/Nairobi').format('LLLL')} on port ${port}`);
 });
 
 function onError(error: any) {

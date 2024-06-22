@@ -14,7 +14,11 @@
   "scripts": {
     "start": "lerna run start",
     "dev": "lerna run dev",
-    "build": "lerna run build"
+    "build": "lerna run build",
+    "generate-migrations": "lerna run generate-migrations",
+    "migrate": "lerna run migrate",
+    "check-migrations": "lerna run check",
+    "drizzle-studio": "lerna run studio"
   },
   "devDependencies": {
     "@nx/node": "^19.3.0",

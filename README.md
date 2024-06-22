@@ -63,4 +63,13 @@ chmod +x dev-scripts.sh
 ./dev-scripts.sh
 ```
 
-### Happy hacking with you!
+## Installing Node Modules
+- To install node modules in a package, run the following command:
+```bash
+yarn add -W <package-name>
+```
+- To update the node_modules inside docker, run the following command:
+```bash
+./dev-scripts.sh update
+```
+

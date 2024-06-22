@@ -45,8 +45,8 @@ export default async ({ app }: { app: Application }) => {
   };
 
   app.use(cors(corsOptions));
-  app.options('*', cors(corsOptions), (req:Request, res:Response) => res.sendStatus(200));
-  app.options('/*', (req:Request, res:Response) => res.sendStatus(200));
+  app.options('*', cors(corsOptions), (req: Request, res: Response) => res.sendStatus(200));
+  app.options('/*', (req: Request, res: Response) => res.sendStatus(200));
 
 
   app.enable('trust proxy');
@@ -63,7 +63,7 @@ export default async ({ app }: { app: Application }) => {
 
 
   // Default endpoint for eb health check
-  app.get('/', (req:Request, res:Response) => res.status(200).send('Welcome to Recall Server'));
+  app.get('/', (req: Request, res: Response) => res.status(200).send('Welcome to Recall Server'));
 
 
 
@@ -77,32 +77,25 @@ export default async ({ app }: { app: Application }) => {
     res.status(200).send({ msg: 'This is working' });
   });
 
-  /**
-     * API Routes
-     * Add more versions of the api below
-     */
-
-  // app.use('/api/v1');
-
   // Redirect errors to specific pages
   /**
      * This is a 404 redirect error
      */
-  app.use((req: Request, res: Response, next: NextFunction) => {
-    res.status(404).format({
-      json: () => {
-        res.send({ err: 'Not Found' });
-      },
-      text: () => {
-        res.send('Not found');
-      },
-      default: () => {
-        res.status(406).send('Not Acceptable');
-      }
-    });
+  // app.use((req: Request, res: Response, next: NextFunction) => {
+  //   res.status(404).format({
+  //     json: () => {
+  //       res.send({ err: 'Not Found' });
+  //     },
+  //     text: () => {
+  //       res.send('Not found');
+  //     },
+  //     default: () => {
+  //       res.status(406).send('Not Acceptable');
+  //     }
+  //   });
 
-    next();
-  });
+  //   next();
+  // });
 
   //connect to DB
   try {
@@ -110,6 +103,6 @@ export default async ({ app }: { app: Application }) => {
     console.log('Connected to DB');
     logger.log('Connected to DB');
   } catch (error) {
-    logger.error('Error connecting to DB',false, error);
+    logger.error('Error connecting to DB', false, error);
   }
 };

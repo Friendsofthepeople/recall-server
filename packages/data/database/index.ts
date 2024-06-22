@@ -17,7 +17,7 @@ export const dbClient = new Client(config);
 
 export const drizzleConfig = defineConfig({
     dialect: "postgresql",
-    schema: "./src/**/*.entity.ts",
+    schema: "./src/**/*.models.ts",
     out: "migrations",
     dbCredentials: postgresConfig.url ? {
         url: postgresConfig.url
@@ -30,5 +30,12 @@ export const drizzleConfig = defineConfig({
     }
 });
 
+export const db = <T>(schema : T ) => {
+    return drizzle(dbClient, {
+        schema: schema as Record<string, T>
+    });
+}
+
+const drizzleInstance = drizzle(dbClient);
 export default drizzle(dbClient);
 

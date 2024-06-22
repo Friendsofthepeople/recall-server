@@ -1,5 +1,5 @@
 {
-    "watch": ["packages"],
+    "watch": ["packages/*"],
     "ext": ".ts, .js, .ejs, .json",
     "ignore": [],
     "exec": "ts-node  --files ./packages/recall-api/index.ts"

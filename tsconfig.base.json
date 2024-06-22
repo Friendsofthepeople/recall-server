@@ -10,6 +10,7 @@
     // Experimental
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
+    "strictPropertyInitialization": false,
     "strict": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,

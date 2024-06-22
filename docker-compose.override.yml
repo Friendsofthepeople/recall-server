@@ -6,6 +6,7 @@ services:
       dockerfile: ./docker/web/Dockerfile
     ports:
       - "4000:4000"
+      - "7200:7200"
     container_name: "recall_server_node"
     environment:
       - NODE_ENV=development

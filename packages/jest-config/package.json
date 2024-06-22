@@ -14,5 +14,8 @@
     "superagent": "^9.0.2",
     "supertest": "^7.0.0",
     "ts-jest": "^29.1.5"
+  },
+  "dependencies": {
+    "reflect-metadata": "^0.2.2"
   }
 }
