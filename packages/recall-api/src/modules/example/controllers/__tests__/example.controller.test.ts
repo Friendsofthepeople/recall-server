@@ -1,4 +1,3 @@
-import 'reflect-metadata'; // Required for TypeDI
 import { Container } from 'typedi';
 import { useContainer, useExpressServer } from 'routing-controllers';
 import request from 'supertest';
@@ -6,7 +5,6 @@ import express from 'express';
 import { ExampleController } from '../example.controllers';
 import { ExampleService } from '../../services/example.service';
 
-// Mock the ExampleService
 jest.mock('../../services/example.service');
 
 describe('ExampleController', () => {
