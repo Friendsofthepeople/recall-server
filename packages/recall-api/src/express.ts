@@ -5,6 +5,7 @@ import compression from 'compression';
 import helmet from 'helmet';
 import cors from 'cors';
 import logger, { loggerMiddleware } from '@recall-server/common/logger';
+import userRoutes from './routes/user.route';
 import { dbClient } from "./database";
 
 export default async ({ app }: { app: Application }) => {
@@ -82,7 +83,7 @@ export default async ({ app }: { app: Application }) => {
      * Add more versions of the api below
      */
 
-  // app.use('/api/v1');
+  app.use('/api/v1/users', userRoutes);
 
   // Redirect errors to specific pages
   /**
