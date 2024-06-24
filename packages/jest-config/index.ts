@@ -9,9 +9,6 @@ const config: Config = {
     "/node_modules/"
   ],
   coverageProvider: "v8",
-  moduleNameMapper: {
-    "^@recall-server/(.*)$": "<rootDir>/../$1/src",
-  },
   testMatch: [
     "**/__tests__/**/*.[jt]s?(x)",
     "**/?(*.)+(spec|test).[tj]s?(x)"

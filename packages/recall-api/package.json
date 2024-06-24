@@ -5,6 +5,10 @@
   "scripts": {
     "build": "tsc",
     "dev": "nodemon",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "jest",
+    "test:watch": "jest --watchAll --detectOpenHandles",
     "generate-migrations": "drizzle-kit generate",
     "migrate": "drizzle-kit migrate",
     "check-migrations": "drizzle-kit check",

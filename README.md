@@ -21,7 +21,10 @@ A Node server for managing the verification of constituents, publishing of repre
     - [Fixing Lint Issues](#fixing-lint-issues)
   - [Additional Libraries](#additional-libraries)
     - [Drizzle ORM](#drizzle-orm)
-    - [License](#license)
+  - [License](#license)
+  - [Contributing](#contributing)
+    - [Code of Conduct](#code-of-conduct)
+    - [Development](#development)
 
 ### Stack
 - Typescript
@@ -129,6 +132,16 @@ yarn lint:fix <package-name>
 - [Drizzle ORM](https://orm.drizzle.team/)
 
 
-### License
+## License
 - This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-```
+
+## Contributing
+
+### Code of Conduct
+- Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing.
+- By participating in this project, you agree to abide by its terms.
+- We are committed to creating a welcoming and inclusive community.
+- We expect contributors to adhere to the Contributor Covenant code of conduct.
+
+### Development
+
