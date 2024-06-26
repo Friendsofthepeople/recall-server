@@ -11,6 +11,12 @@ export default class UserService {
     public getExample() {
         return {
             message: 'User Basic Example'
-        }
+        };
+    }
+
+    public register() {
+        return {
+            message: 'Register Registration'
+        };
     }
 }

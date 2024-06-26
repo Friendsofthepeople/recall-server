@@ -1,11 +1,10 @@
 import express, {
-  Application, Request, Response, NextFunction
+  Application, Request, Response,
 } from 'express';
 import compression from 'compression';
 import helmet from 'helmet';
 import cors from 'cors';
 import logger, { loggerMiddleware } from '@recall-server/common/logger';
-import userRoutes from './routes/user.route';
 import { dbClient } from "@recall-server/data/database";
 
 export default async ({ app }: { app: Application }) => {
@@ -82,8 +81,6 @@ export default async ({ app }: { app: Application }) => {
      * API Routes
      * Add more versions of the api below
      */
-
-  app.use('/api/v1/users', userRoutes);
 
   // Redirect errors to specific pages
   /**
