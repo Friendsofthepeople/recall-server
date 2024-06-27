@@ -1,5 +1,5 @@
 import express, {
-  Application, Request, Response, NextFunction
+  Application, Request, Response,
 } from 'express';
 import compression from 'compression';
 import helmet from 'helmet';
@@ -76,6 +76,11 @@ export default async ({ app }: { app: Application }) => {
   app.get('/test', (req: Request, res: Response) => {
     res.status(200).send({ msg: 'This is working' });
   });
+
+  /**
+     * API Routes
+     * Add more versions of the api below
+     */
 
   // Redirect errors to specific pages
   /**

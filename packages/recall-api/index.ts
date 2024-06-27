@@ -1,7 +1,7 @@
 import http from 'http';
 import dayjs from 'dayjs';
 import app from './src';
-import Logger from '@recall-server/common/logger';
+import Logger from '../common/logger';
 import process from 'process';
 import chalk from 'chalk';
 process.setMaxListeners(100);
